@@ -83,6 +83,14 @@ function hideAddWindow() {
     document.getElementById('backlog').classList.remove('d-none');
 }
 
+class Todo {
+    constructor(title, description, id) {
+        this.title = title;
+        this.description = description;
+        this.id = id;
+    }
+}
+
 async function addTodo() {
     let title = document.getElementById('title');
     let description = document.getElementById('description');
