@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    /* color-scheme: dark light; */
+}
+
+.content {
+    max-width: 1200px;
+    height: 100svh;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.column {
+    width: 33%;
+    height: 100%;
+    border: 1px solid #bbb;
+    padding: 16px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+}
+
+.column h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.dividerHorizontal {
+    border-bottom: 2px solid #bbb;
+    width: 80%;
+    margin-inline: auto;
+    margin-bottom: 32px;
+}
+
+.toDoBox {
+    width: 100%;
+    min-height: 100px;
+    word-break: break-word;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    border: 1px solid #bbb;
+    padding: 8px;
+}
+
+.highlight {
+    background-color: rgba(206, 206, 206, 0.3);
+}
+
+.addRow {
+    display: flex;
+    align-items: center;
+}
+
+.addBtn {
+    margin-left: auto;
+    background-color: rgba(206, 206, 206, 0.3);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 175ms;
+}
+
+.addBtn:hover {
+    cursor: pointer;
+    scale: 110%;
+    transition-duration: 175ms;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.addWindow {
+    display: flex;
+    flex-direction: column;
+}
+
+.addForm {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}

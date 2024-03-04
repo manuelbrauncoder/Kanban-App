@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body onload="init()">
+    <div class="content">
+        <div class="column">
+            <div class="addRow"><h1>Backlog</h1><span onclick="showAddWindow()" class="addBtn">+</span></div>
+            <hr class="dividerHorizontal">
+            <div class="addWindow d-none" id="addWindow">
+                <form class="addForm" onsubmit="addTodo(); return false">
+                    <input type="text" id="title" required placeholder="title...">
+                    <input type="text" id="description" required placeholder="description...">
+                    <button>Add Todo</button>
+                </form>
+            </div>
+            <div class="container" id="backlog" ondragleave="removeHighlight('backlog')" ondrop="moveTo('backlog')" ondragover="allowDrop(event); addHighlight('backlog')"></div>
+        </div>
+        <div class="column">
+            <h1>Active</h1>
+            <hr class="dividerHorizontal">
+            <div class="container" id="active" ondragleave="removeHighlight('active')" ondrop="moveTo('active')" ondragover="allowDrop(event); addHighlight('active')"></div>
+        </div>
+        <div class="column">
+            <h1>Complete</h1>
+            <hr class="dividerHorizontal">
+            <div class="container" id="complete" ondragleave="removeHighlight('complete')" ondrop="moveTo('complete')" ondragover="allowDrop(event); addHighlight('complete')"></div>
+        </div>
+    </div>
+</body>
+</html>
